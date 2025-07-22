@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import AllPropiedadesView from '../views/AllPropiedadesView.vue'
 import { onAuthStateChanged } from 'firebase/auth'
 import { useFirebaseAuth } from 'vuefire'
 
@@ -10,6 +11,11 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
+      component: AllPropiedadesView
+    },
+    {
+      path:'/destacadas',
+      name: 'destacadas',
       component: HomeView
     },
     {
@@ -37,7 +43,6 @@ const router = createRouter({
       name:'contacto',
       component:() => import('../views/Contacto.vue')
     },
-   
     {
       path:'/admin',
       name:'admin',

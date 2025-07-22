@@ -13,7 +13,7 @@ const drawer = ref(false)
         <template v-slot:prepend>
           <v-btn :to="{ name: 'home' }" variant="text" class="d-flex align-center" style="color: var(--secondary);">
             <v-icon size="36" class="mr-2">mdi-home-city</v-icon>
-            <span class="text-h5 font-weight-bold">VMP</span>
+            <span class="text-h5 font-weight-bold">VM</span>
             <span class="ml-2 text-subtitle-1 font-weight-light">Propiedades</span>
           </v-btn>
         </template>
@@ -27,12 +27,12 @@ const drawer = ref(false)
           <div class="d-none d-md-flex">
             <div v-if="auth.isAuth">
               <v-btn :to="{ name: 'admin-propiedades' }" variant="text" style="color: var(--secondary);">Admin</v-btn>
-              <v-btn :to="{ name: 'propiedades' }" variant="text" style="color: var(--secondary);">Propiedades</v-btn>
+              <v-btn :to="{ name: 'destacadas' }" variant="text" style="color: var(--secondary);">Propiedades Destacadas</v-btn>
               <v-btn @click="auth.logout" variant="text" style="color: var(--secondary);">Cerrar Sesión</v-btn>
             </div>
             <div v-else>
               <v-btn :to="{ name: 'home' }" variant="text" style="color: var(--secondary);">Inicio</v-btn>
-              <v-btn :to="{ name: 'propiedades' }" variant="text" style="color: var(--secondary);">Propiedades</v-btn>
+              <v-btn :to="{ name: 'destacadas' }" variant="text" style="color: var(--secondary);">Propiedades Destacadas</v-btn>
               <v-btn :to="{name: 'contacto'}" variant="text" style="color: var(--secondary);">Contactanos</v-btn>
               <v-btn :to="{ name: 'login' }" variant="flat" style="background: var(--accent); color: #fff;">Iniciar Sesión</v-btn>
             </div>

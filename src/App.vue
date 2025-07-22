@@ -46,8 +46,8 @@ const drawer = ref(false)
             <v-list-item @click="drawer = false" :to="{ name: 'admin-propiedades' }">
               <v-list-item-title>Admin</v-list-item-title>
             </v-list-item>
-            <v-list-item @click="drawer = false" :to="{ name: 'propiedades' }">
-              <v-list-item-title>Propiedades</v-list-item-title>
+            <v-list-item @click="drawer = false" :to="{ name: 'destacadas' }">
+              <v-list-item-title>Destacadas</v-list-item-title>
             </v-list-item>
             <v-list-item @click="auth.logout(); drawer = false">
               <v-list-item-title>Cerrar Sesión</v-list-item-title>
@@ -57,8 +57,8 @@ const drawer = ref(false)
             <v-list-item @click="drawer = false" :to="{ name: 'home' }">
               <v-list-item-title>Inicio</v-list-item-title>
             </v-list-item>
-            <v-list-item @click="drawer = false" :to="{ name: 'propiedades' }">
-              <v-list-item-title>Propiedades</v-list-item-title>
+            <v-list-item @click="drawer = false" :to="{ name: 'destacadas' }">
+              <v-list-item-title>Destacadas</v-list-item-title>
             </v-list-item>
             <v-list-item @click="drawer = false" :to="{ name: 'contacto' }">
               <v-list-item-title>Contactanos</v-list-item-title>

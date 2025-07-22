@@ -1,0 +1,14 @@
+:root {
+  --primary: #223A5E;
+  --secondary: #F6C85F;
+  --accent: #3CAEA3;
+  --info: #F4F4F9;
+  --error: #E94F37;
+}
+
+body {
+  background: var(--primary);
+  color: #fff;
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+  min-height: 100vh;
+}

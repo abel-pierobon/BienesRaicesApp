@@ -1,0 +1,21 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Reglas para propiedades
+    match /propiedades/{docId} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    // Reglas para consultas
+    match /consultas/{docId} {
+      allow read: if true;
+      allow write: if true;
+    }
+    // Regla general para otras colecciones
+    match /{document=**} {
+      allow read, write: if request.auth != null;
+      allow read: if request.auth == null;
+    }
+  }
+} 

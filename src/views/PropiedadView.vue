@@ -63,12 +63,12 @@ watch(propiedad, (propiedad) => {
         </div>
         <v-row>
             <v-col cols="12" md="8">
-                <div class="text-pre-wrap py-5" style="color: #444; background: #fff; border-radius: 12px; box-shadow: 0 1px 6px rgba(34,58,94,0.06);">
+                <div class="text-pre-wrap py-5 px-3" style="color: #444; background: #fff; border-radius: 12px; box-shadow: 0 1px 6px rgba(34,58,94,0.06);">
                     {{ propiedad?.descripcion }}
                 </div>
             </v-col>
             <v-col cols="12" md="4">
-                <div class="py-10" style="height: 400px; background: #fff; border-radius: 12px; box-shadow: 0 1px 6px rgba(34,58,94,0.06);">
+                <div class="py-10 px-2" style="height: 400px; background: #fff; border-radius: 12px; box-shadow: 0 1px 6px rgba(34,58,94,0.06);">
                     <LMap ref="map" v-model:zoom="zoom" :center="center" :use-global-leaflet="false">
                         <LMarker :lat-lng="center">
                             <LPopup>

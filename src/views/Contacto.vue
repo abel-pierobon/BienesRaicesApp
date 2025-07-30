@@ -92,15 +92,15 @@ const enviarFormulario = async () => {
             </v-list-item>
             <v-list-item>
               <v-list-item-icon><v-icon color="primary">mdi-phone</v-icon></v-list-item-icon>
-              <v-list-item-title style="color: var(--primary);">0353 123-4567</v-list-item-title>
+              <v-list-item-title style="color: var(--primary);">+54 9 351 706-2293</v-list-item-title>
             </v-list-item>
             <v-list-item>
               <v-list-item-icon><v-icon color="error">mdi-email</v-icon></v-list-item-icon>
-              <v-list-item-title style="color: var(--primary);">info@vmp-propiedades.com</v-list-item-title>
+              <v-list-item-title style="color: var(--primary);">info@bienesraices.com</v-list-item-title>
             </v-list-item>
             <v-list-item>
               <v-list-item-icon><v-icon color="secondary">mdi-map-marker</v-icon></v-list-item-icon>
-              <v-list-item-title style="color: var(--primary);">San Martín 123, Villa María, Córdoba</v-list-item-title>
+              <v-list-item-title style="color: var(--primary);">San Martín 123, Córdoba, Córdoba</v-list-item-title>
             </v-list-item>
           </v-list>
           <v-divider class="my-4" style="border-color: var(--info);" />

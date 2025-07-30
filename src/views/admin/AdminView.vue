@@ -26,7 +26,7 @@ const eliminarConsulta = async (id) => {
                 Nueva Propiedad
             </v-btn>
             <v-btn style="background: var(--secondary); color: var(--primary); border-radius: 8px; box-shadow: none;" variant="flat" class="ml-4" @click="mostrarConsultas = !mostrarConsultas">
-                {{ mostrarConsultas ? 'Ocultar Consultas' : 'Ver Consultas' }}
+                {{ mostrarConsultas ? 'Ver Propiedades' : 'Ver Consultas' }}
             </v-btn>
         </div>
         <v-card class="mx-auto mt-10" flat style="background: #fff; border-radius: 16px; box-shadow: none; max-width: 900px;" v-if="mostrarConsultas">
@@ -41,20 +41,25 @@ const eliminarConsulta = async (id) => {
                 </v-list-item>
             </v-list>
         </v-card>
-        <v-card class="mx-auto mt-10" flat style="background: #fff; border-radius: 16px; box-shadow: none; max-width: 900px;">
+        
+        <v-card v-if="!mostrarConsultas" class="mx-auto mt-10" flat style="background: #fff; border-radius: 16px; box-shadow: none; max-width: 900px;">
             <v-list>
                 <v-list-item v-for="propiedad in propiedadesCollection" :key="propiedad.id">
                     <v-list-item-title style="color: var(--primary);">{{ propiedad.titulo }}</v-list-item-title>
-                    <v-list-item-subtitle class="text-truncate" style="color: #888;">
+                    <v-list-item-subtitle class="text-truncate" style="color: black;">
                         {{ propiedad.direccion }}
                     </v-list-item-subtitle>
-                    <v-list-item-subtitle class="text-truncate" style="color: #bbb;">
+                    <v-list-item-subtitle class="text-truncate" style="color: black;">
                         {{ propiedad.descripcion }}
                     </v-list-item-subtitle>
-                    <v-list-item-subtitle style="color: var(--accent);">
+                    <v-list-item-subtitle style="color: black; font-weight: bold;">
                         <span v-if="propiedad.moneda === 'ARS'">AR$</span><span v-else>US$</span> {{ propertyPrice(propiedad.precio, propiedad.moneda || 'USD') }}
                     </v-list-item-subtitle>
                     <template v-slot:append>
+                        <v-btn style="background: var(--accent);border: 1px solid gray; color: #fff; border-radius: 8px; box-shadow: none;" flat class="mr-3"
+                            :to="{ name: 'propiedad', params: { id: propiedad.id } }">
+                            <v-icon style="color: black;">mdi-eye</v-icon>
+                        </v-btn>
                         <v-btn style="background: var(--accent); color: #fff; border-radius: 8px; box-shadow: none;" flat class="mr-3"
                             :to="{ name: 'editar-propiedad', params: { id: propiedad.id } }">
                             Editar

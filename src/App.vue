@@ -13,8 +13,7 @@ const drawer = ref(false)
         <template v-slot:prepend>
           <v-btn :to="{ name: 'home' }" variant="text" class="d-flex align-center" style="color: var(--secondary);">
             <v-icon size="36" class="mr-2">mdi-home-city</v-icon>
-            <span class="text-h5 font-weight-bold">VM</span>
-            <span class="ml-2 text-subtitle-1 font-weight-light">Propiedades</span>
+            <span class="ml-2 text-subtitle-1 font-weight-light">Bienes Raíces</span>
           </v-btn>
         </template>
         <v-spacer />
@@ -76,10 +75,10 @@ const drawer = ref(false)
       </v-main>
     </v-layout>
     <footer style="background: #fff; color: var(--primary); border-radius: 0 0 18px 18px; box-shadow: 0 -1px 8px rgba(34,58,94,0.04); padding: 32px 0 16px 0; text-align: center; font-size: 1.1rem;">
-      <div class="mb-2" style="font-weight: bold;">VMP Propiedades</div>
-      <div class="mb-1">San Martín 123, Villa María, Córdoba</div>
-      <div class="mb-1">Tel: +54 9 351 706-2293 | info@vmp-propiedades.com</div>
-      <div style="font-size: 0.95rem; color: #888;">&copy; {{ new Date().getFullYear() }} VMP Propiedades. Todos los derechos reservados.</div>
+      <div class="mb-2" style="font-weight: bold;">Bienes Raíces</div>
+      <div class="mb-1">San Martín 123, Córdoba, Córdoba</div>
+      <div class="mb-1">Tel: +54 9 351 706-2293 | info@bienes_raíces.com</div>
+      <div style="font-size: 0.95rem; color: #888;">&copy; {{ new Date().getFullYear() }} Bienes Raices. Todos los derechos reservados.</div>
     </footer>
   </v-card>
   <a

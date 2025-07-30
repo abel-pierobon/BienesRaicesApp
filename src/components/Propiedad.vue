@@ -37,15 +37,20 @@ defineProps({
                 cover
                 class="rounded-lg mb-2"
             />
+            <v-chip class="ml-2"  style="color:var(--primary); font-weight: 500;font-size: bold;" variant="outlined" size="small">{{ propiedad.operacion }}</v-chip>
+
             <v-card-title class="font-weight-bold text-h6" style="color: var(--primary);">
-                {{ propiedad.titulo }}
+                {{ propiedad.titulo }} 
             </v-card-title>
+            
             <v-card-text class="text-truncate" style="color: #444;">
                 {{ propiedad.descripcion }}
             </v-card-text>
+            
             <v-card-subtitle class="text-truncate" style="color: var(--secondary); font-weight: 500;">
                 {{ propiedad.direccion }}
             </v-card-subtitle>
+            
             <v-card-text class="text-h5 font-weight-bold" style="color: var(--accent);">
                 Precio: <span v-if="propiedad.moneda === 'ARS'">AR$</span><span v-else>US$</span> {{ price(propiedad.precio, propiedad.moneda || 'USD') }}
             </v-card-text>
